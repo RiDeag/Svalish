@@ -1,0 +1,1988 @@
+/*(TODO: Nothing [Until I / someone else finds something wrong, ofcourse.])*/
+
+@-moz-document domain("boards.4chan.org") {
+
+/**
+    Main Colours
+*/
+
+.thread:not(html) {
+  background: #f4f4f4 !important;
+}
+
+#threads .thread {
+  background: #ffffff !important;
+}
+
+#shortcuts::after,
+#header-bar {
+  background: #3a485d !important;
+}
+
+#header-bar.dialog:not(.autohide) {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, .5) !important;
+}
+
+#full-board-list {
+  background-color: #fff !important;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15) !important;
+}
+
+#custom-board-list {
+  background: #3a485d !important;
+}
+
+#custom-board-list a {
+  color: #d4d9d9 !important;
+}
+
+#custom-board-list a:hover {
+  color: #fff !important;
+}
+
+#custom-board-list .current:hover::before {
+  color: #fff !important;
+}
+
+#custom-board-list:hover::before {
+  background: transparent !important;
+}
+
+#board-list {
+  color: transparent !important;
+}
+
+#shortcuts {
+  color: transparent !important;
+  cursor: default !important;
+}
+
+.postContainer {
+  background-color: #fff !important;
+  border-left: 1px solid #eeeeee !important;
+  border-right: 1px solid #eeeeee !important;
+}
+
+.postContainer:last-of-type {
+  border-radius: 0 0 5px 5px !important;
+  border-bottom: 1px solid #eeeeee !important;
+}
+
+.threadContainer,
+.threadContainer .postContainer {
+  border-color: #eeeeee !important;
+  border-radius: 0 !important;
+}
+
+.threadContainer {
+  border-left: 20px solid #f4f4f4 !important;
+}
+
+#globalMessage {
+  border-radius: 5px !important;
+  border: 1px solid #eeeeee !important;
+  background: #fff !important;
+}
+
+.post.reply {
+  background: transparent !important;
+}
+
+#qp .yourPost .post.reply, 
+#qp .quotesYou .post.reply,
+#qp .post.reply,
+#qp {
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+#qp .postContainer {
+  border-radius: 0 !important;
+  border: 1px solid #eeeeee !important;
+}
+
+.inline.crosspost .postContainer.replyContainer {
+  border: 1px solid #ccc !important;
+}
+
+.inline {
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.inline .opContainer,
+.inline .postContainer {
+  background: #ffffff !important;
+  border: 1px solid #eeeeee !Important;
+  box-shadow: none !important;
+  padding-right: 30px !important;
+  min-width: 350px !important;
+}
+
+.inline .post.reply {
+  width: 100% !important;
+  border: none !important;
+}
+
+.opContainer.qphl {
+  box-shadow: none !important;
+}
+
+.opContainer {
+  border-radius: 5px 5px 0 0 !important;
+  border-top: 1px solid #eeeeee !important;
+}
+
+#unread-line {
+  border-top: 1px solid rgba(200, 98, 99, .5) !important;
+}
+
+.hide-announcement::after {
+  color: #ad4541 !important;
+}
+
+#globalMessage strong, h2,
+#globalMessage h3 {
+  color: #5F5F5F !important;
+}
+
+body {
+  background: #ffffff !important;
+  color: #454545 !important;
+}
+
+#watcher,
+#watcher a {
+  color: #aaa !important;
+}
+
+#thread-watcher.dialog {
+  border: 1px solid #ebebeb !important;
+  background: #fff !important;
+}
+
+.cataloglink a::before,
+.navLinks.navLinksBot a[href*="catalog"]::after,
+.cataloglink a::after,
+.navLinks.navLinksBot a[href*="catalog"]::before,
+.settings-link::after {
+  color: #d4d9d9 !important;
+}
+
+.quotelink.inlined,
+.backlink.inlined,
+.inlined,
+#dump-button:hover,
+.globalMessage a:hover,
+.hand,
+.posteruid,
+.postertrip,
+.abbr a:hover,
+.pages a:hover,
+.pages strong a,
+#qr:hover::before,
+.quotelink:hover,
+.backlink:hover,
+.inline .backlink:hover,
+.postMessage .linkify:hover,
+.embedder:hover,
+.fileText:hover a,
+.fileText:hover,
+.fileInfo a:hover,
+.summary:hover,
+#watcher a:hover{
+  color: #5f5f65 !important;
+}
+
+#dump-button,
+.hand:hover,
+.posteruid:hover,
+.posteruid:hover .hand{
+  color: #434347 !important;
+}
+
+.name {
+  color: #49637d !important;
+}
+
+.stub a,
+.stub span:not(.dropmarker)::before,
+.hide-thread-button span::before,
+.hide-reply-button span::before,
+.post.op .menu-button::after,
+.postContainer .menu-button::after,
+#add-post,
+.abbr a,
+.embedder,
+.linkify,
+.globalMessage a,
+.fileThumb > img:first-child,
+.backlink,
+.inline .backlink,
+a.quotelink,
+.useremail {
+  color: #999 !important;
+}
+
+a.useremail[href*='sage'] .name,
+a.useremail[href*='Sage'] .name,
+a.useremail[href*='SAGE'] .name,
+a.useremail[href*='sage'] .postertrip,
+a.useremail[href*='Sage'] .postertrip,
+a.useremail[href*='SAGE'] .postertrip {
+  color: #a16c6c !important;
+} 
+
+a.useremail[href*='sage'] .name:hover,
+a.useremail[href*='Sage'] .name:hover,
+a.useremail[href*='SAGE'] .name:hover,
+a.useremail[href*='sage'] .postertrip:hover,
+a.useremail[href*='Sage'] .postertrip:hover,
+a.useremail[href*='SAGE'] .postertrip:hover {
+  color: #a12b2b !important;
+}
+
+.pages a,
+.summary,
+.nameBlock a:hover::after {
+  color: #a6a6a6 !important;
+}
+
+.dateTime {
+  color: #b3b7bd !important;
+  font-size: 9pt !important;
+}
+
+.settings-link:hover,
+.postNum a {
+  color: #7c818c !important;
+}
+
+.quotelink.filtered,
+.warning,
+.deadlink,
+.deadlink.quotelink,
+.postMessage strong {
+  color: #d56b6b !important;
+}
+
+.deadlink:hover {
+  color: #c34c4f !important;
+}
+
+.highlight-you:root .quotesYou .post.reply,
+.highlight-own:root .yourPost .post.reply {
+  border-left: none !important;
+}
+
+.exblock.reply,
+.reply.post.highlight,
+.reply:target,
+.post.op.qphl {
+  background: none !important;
+  outline: none !important;
+}
+
+.post.op.qphl,
+.post.reply.qphl {
+  outline: none !important;
+}
+
+.fileText,
+.fileInfo a {
+  color: #828282 !important;
+}
+
+.quote {
+  color: #093 !important;
+}
+
+.subject {
+  color: #7a7f88 !important;
+}
+
+.quote a,
+.prettyprint a,
+.prettyprint a:hover {
+  color: inherit !important;
+}
+
+.prettyprint {
+  background-color: rgba(255,255,255,.7) !important;
+  border: solid 1px rgba(95,95,95,.5) !important;
+}
+
+#fourchanx-settings.dialog a {
+  color: #49637d !important;
+}
+
+#fourchanx-settings.dialog a:hover {
+  color: #2f4052 !important;
+}
+
+.pagelist {
+  color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.next,
+.prev,
+.pages.cataloglink,
+.pagelist .prev input,
+.pagelist .next input {
+  background: none !important;
+  color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#options.reply.dialog {
+  background: #fff !important;
+  color: #717171 !important;
+  border: none !important;
+}
+
+#options.reply.dialog label {
+  color: #494949 !important;
+}
+
+#optionsbar {
+  border-bottom: 1px solid #eceef0 !important;
+}
+
+#fourchanx-settings.dialog {
+  background: #fff !important;
+}
+
+.dialog {
+  background: none !important;
+  color: #2e3033 !important;
+  border: transparent !important;
+}
+
+#qr.dialog {
+  background: transparent !important;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15) !important;
+  border-right: 1px solid #f1f1f1 !important;
+}
+
+#qr textarea.field {
+  border-bottom: 1px solid #f1f1f1 !important;
+  border-top: 1px solid #f1f1f1 !important;
+}
+
+#qr .persona {
+  padding: 0 !important;
+}
+
+#qr textarea.field:hover {
+  box-shadow: inset 0 0 0 1px rgba(115, 148, 198, .15) !important;
+}
+
+#qr textarea.field:focus {
+  box-shadow: inset 0 0 0 1px rgba(115, 148, 198, .3) !important;
+}
+
+input[name="email"],
+input[name="sub"] {
+  border-left: 1px solid #f1f1f1 !important;
+}
+
+#qr .captcha-input.field,
+#dump-list-container {
+  border-bottom: 1px solid #f1f1f1 !important;
+}
+
+#qr .move {
+  color: transparent !important;
+  background-color: transparent !important;
+}
+
+#qr-spoiler-label {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .095) inset;
+  background: #fff !important;
+}
+
+#qr-filerm {
+  color: #999 !important;
+}
+
+#qr [type=file] [type=text]:focus {
+  border: 1px solid grey !important; 
+}
+
+textarea,
+.field,
+#qr [type=file] [type=text] {
+  background-color: #fff !important;
+}
+
+.persona .field[name="name"] {
+  color: transparent !important;
+}
+
+.persona .field[name="name"]:focus,
+.persona .field[name="name"]:hover {
+  color: inherit !important;
+}
+
+select,
+textarea:not(:focus),
+.field:not(:focus) {
+  background: #fff !important;
+}
+
+#qr [type=file] [type=text]:not(:focus) {
+  background: #fff !important;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"].active,
+input[type="submit"].disabled,
+input[type="submit"][disabled] {
+  color: #919191 !important;
+}
+
+input[type="submit"].disabled,
+input[type="submit"][disabled] {
+  color: #d56b6b !important;
+}
+
+
+input[type="submit"] {
+  color: #aaaaaa !important;
+  background: #fff !important;
+  border: none !important;
+  border-left: 1px solid #f1f1f1 !important;
+}
+
+.captcha-img {
+  border: none !important;
+}
+
+.captcha-img > img {
+  border-bottom: transparent !important;
+}
+
+.captcha-input.field {
+  border-top: 1px solid #f1f1f1 !important;
+}
+
+#replies > div {
+  border-top: 1px solid rgba(0, 0, 0, .094) !important;
+  border-left: 1px solid #dedede !important;
+  border-right: 1px solid #dedede !important;
+}
+
+#replies > div .thumbnail {
+  background-color: rgba(160,160,160,.5) !important;
+}
+
+#dump-list-container {
+  background: #fff !important;
+}
+
+.postContainer .menu-button i {
+  color: transparent !important;
+}
+
+.stub > a:hover,
+.postContainer .menu-button:hover::after,
+.post.op .menu-button:hover::after {
+  color: #666 !important;
+}
+
+#header-bar .menu-button {
+  background: #7d91ae !important;
+}
+
+#menu.reply.dialog {
+  border: 1px solid #ccc !important;
+}
+
+.entry,
+.entry a,
+.subMenu {
+  background: #ffffff !important;
+  color: #999 !important;
+  border: none !important;
+}
+
+.entry:hover,
+.entry a:hover {
+  color: #49637d !important;
+}
+
+.stub span,
+.sideArrows,
+.hide-reply-button.stub span,
+.hide-reply-button.stub .menu-button {
+  color: transparent !important;
+}
+
+.stub {
+  background-color: #fff !important;
+  border: 1px solid #ebebeb !important;
+}
+
+#thread-stats {
+  color: #5c5e5e !important;
+  border: none !important;
+  background: none !important;
+}
+
+.notification.warning #errmsg {
+  color: #dd0010 !important;
+}
+
+.quotelink.you {
+  font-size: 0 !important;
+}
+
+.quotelink.you:after {
+  content: ">>Reply To You";
+  font-size: 10pt !important;
+  color: #769ec2 !important;
+}
+
+.quotelink.you:hover::after {
+  color: #5e84a7 !important;
+}
+
+.gal-thumbnails {
+  background: rgb(50, 50, 50) !important;
+}
+
+.gal-thumbnails img {
+  opacity: 0.4 !important;
+}
+
+.gal-highlight img {
+  opacity: 1 !important;
+}
+
+.gal-highlight {
+  background: none !important;
+}
+
+#watcher-link:hover {
+  color: #5c5e5e !important;
+}
+
+#thread-stats {
+  color: #5c5e5e !important;
+}
+
+/**
+    Main Layout
+*/
+
+#appchan-gal,
+#boardNavDesktopFoot,
+.ad-plea,
+.expand-all-shortcut,
+.contract-all-shortcut,
+#qr .close,
+#qr #autohide,
+.boardBanner > img,
+.boardTitle,
+.boardSubtitle,
+#copyright,
+.deleteform,
+.postingMode,
+.stylechanger,
+.postForm,
+.extButton,
+h1,
+hr,
+div.center,
+#hideBtn,
+#absbot,
+.hide-reply-button.stub a::before,
+.board_mlp .quotesYou,
+.board_mlp .yourPost,
+.board_mlp .postContainer:nth-of-type(2n+3) {
+  display: none !important;
+}
+
+*:active, *:focus {
+  outline: none !important;
+}
+
+.thread:not(html) {
+  padding: 50px 25px 25px 25px !important;
+  border-radius: 10px !important;
+  margin-bottom: 25px !important;
+}
+
+.board {
+  margin: 20px 71px 10px 75px !important;
+}
+
+#threads .thread {
+  padding: 20px 0 !important;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif !important;
+}
+
+#header-bar {
+  height: 29px !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transition: all 0.5s ease;
+}
+
+#shortcuts::after {
+  content: "" !important;
+  height: 29px !important;
+  width: 100% !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  z-index: -10 !important;
+}
+
+#custom-board-list {
+  display: inherit !important;
+  position: fixed !important;
+  top: -100px !important;
+  left: auto !important;
+  width: auto !important;
+  font-size: 0 !important;
+  padding: 2px !important;
+  z-index: 90 !important;
+  white-space: nowrap !important;
+}
+
+#custom-board-list a {
+  font-size: 14px !important;
+  margin: 3px !important;
+}
+
+#custom-board-list .current::before {
+  content: attr(title);
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  padding: 4px !important;
+  height: 21px !important;
+  font-size: 10pt !important;
+  font-weight: normal !important;
+  pointer-events: auto !important;
+}
+
+#custom-board-list:hover .current::before {
+  padding-right: 50px !important;
+}
+
+#custom-board-list .current {
+  font-size: 0 !important;
+  margin: 0 -2px !important;
+  pointer-events: none !important;
+}
+
+#custom-board-list:hover {
+  text-align: left !important;
+  position: fixed !important;
+  top: 35px !important;
+  float: right !important;
+  left: 5px !important;
+  padding: 5px 5px 5px 10px !important;
+  cursor: default !important;
+}
+
+#custom-board-list:hover::after {
+  position: fixed !important;
+  top: 29px !important;
+  left: 0px !important;
+  padding-left: 25px !important;
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAKCAMAAABcxfTLAAAAKlBMVEU2QlM7RlY7RlY3QlM3QlM7Rlc7Rlc7RlY7RlY7RlY3QlMAAAA5Rlo6SF3jJX08AAAADHRSTlP4T1Dt65ydTRQW7ABIn5JhAAAAPklEQVR42k3HyREAIAgEQbwB2fzTtRQtmdc0zRMT+1xXaHQD0L4HduOZ7djkWuGpu+PVtxN+eZJYsAkpYmUB/5AGm0QoWnEAAAAASUVORK5CYII=) !important;
+  width: 100px !important;
+}
+
+#custom-board-list:hover::before {
+  position: fixed !important;
+  content: "" !important;
+  height: 33px !important;
+  top: 29px !important;
+  left: 0px !important;
+  padding-left: 35px !important;
+  width: 100px !important;
+  z-index: -200 !important;
+}
+
+#full-board-list a {
+  white-space: pre;
+  margin: 0 !important;
+  margin-right:5px !important;
+}
+
+#full-board-list {
+  font-size: 0px !important;
+}
+
+#full-board-list {
+  display: inline !important;
+  visibility: hidden !important;
+  position: fixed !important;
+  top: 80px !important;
+  left: -160px !important;
+  width: 150px !important;
+  padding: 10px !important;
+  padding-right: 0px !important;
+  transition: all 0.5s ease;
+  z-index: 9 !important;
+  text-align: left !important;
+}
+
+#full-board-list:not([Hidden]) {
+  visibility: visible !important;
+  left: 0px !important;
+  bottom: auto !important;
+  transition: all 0.5s ease;
+}
+
+#custom-board-list a[href="javascript:;"],
+#full-board-list a[href="javascript:;"] {
+  padding: 0 !important;
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+}
+
+#updater,
+.settings-link {
+  position: fixed !important;
+  top: 5000px !important;
+}
+
+#watcher-link.disabled {
+  opacity: 0 !important;
+  position: fixed !important;
+  right: 2px !important;
+  bottom: 2px !important;
+}
+
+#watcher-link {
+  opacity: 0 !important;
+  position: fixed !important;
+  right: 2px !important;
+  bottom: 2px !important;
+}
+
+#watcher-link:hover {
+  opacity: 1 !important;
+}
+
+.navLinks,
+.cataloglink {
+  font-size: 0 !important;
+}
+
+#header-bar .menu-button {
+  opacity: 0 !important;
+  font-size: 9pt !important;
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+  z-index: 200 !important;
+  width: 20px !important;
+  height: 29px !important;
+}
+
+#header-bar .menu-button:hover {
+  opacity: 1 !important;
+}
+
+.postContainer .menu-button,
+.postContainer .hide-reply-button,
+.postContainer .fileInfo a {
+   transition: all .3s ease !important;
+}
+
+.postContainer {
+  margin-bottom: -1px !important;
+  min-width: 99% !important;
+}
+
+.post.op,
+.postContainer.opContainer {
+  margin-bottom: -1px !important;
+  min-width: 99.8% !important;
+  max-width: 99.8% !important;
+}
+
+.post.reply {
+  position: relative !important;
+  margin: 0 0 0 23px !important;
+  border-top: 1px solid #eeeeee !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  width: calc(100% - 50px) !important;
+  overflow: visible !important;
+}
+
+#header-bar.autohide:not(:hover) {
+  transition: all 1.5s 0.5s ease !important;
+}
+
+.expanded-image,
+.threadOP {
+  clear: none !important;
+}
+
+.threadContainer {
+  padding-left: 0 !important;
+  margin-left: 1px !important;
+}
+
+.threadContainer .postContainer {
+  max-width: 99.7% !important;
+  min-width: 99.7% !important;
+}
+
+.post.op.qphl::before {
+  position: absolute !important;
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAPFBMVEWpcXemd4CkeIGkeIKmd4CieYOqcXikeIKieYOoaW6odX6qZmoAAADEY2XDZGazZWm2ZWm+ZmnHY2TIYmPQ4oCaAAAADXRSTlOxWTEXUBSuMATjffgAMsIOvAAAAEBJREFUeNp9zksOgCAAA1FUEOWPvf9dTUyQjAtn9zZNTWLD50ErOlrV0+r2sd5KoHXtHxs4B+4t2G8r/2w/f2c34I8LG54U8U4AAAAASUVORK5CYII=) !important;
+  margin-left: -20px !important;
+  margin-top: 7px !important;
+}
+
+.reply:target::before,
+.reply.highlight::before,
+.post.reply.qphl::before {
+  position: absolute !important;
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAPFBMVEWpcXemd4CkeIGkeIKmd4CieYOqcXikeIKieYOoaW6odX6qZmoAAADEY2XDZGazZWm2ZWm+ZmnHY2TIYmPQ4oCaAAAADXRSTlOxWTEXUBSuMATjffgAMsIOvAAAAEBJREFUeNp9zksOgCAAA1FUEOWPvf9dTUyQjAtn9zZNTWLD50ErOlrV0+r2sd5KoHXtHxs4B+4t2G8r/2w/f2c34I8LG54U8U4AAAAASUVORK5CYII=) !important;
+  left: -43px !important;
+  top: 7px !important;
+}
+
+.highlight-own:root .yourPost .post.reply::before {
+  position: absolute !important;
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAM1BMVEWfnayfm6qfoLCUnq6fn6+enKuVnq6ena2Zna6emqkAAACbuMybuMubs8aaus6ZrL6au8+Au+NIAAAAC3RSTlNZLJP2hybzV8UIAJchNFQAAAA8SURBVHjafc5ZCgAgEALQad/L+582CCKcj/x7IKJUzvUqbIzARk9sTH+Ml6yMqOxUn/cs7TfhP+bz92UDJx8Jclmil2UAAAAASUVORK5CYII=) !important;
+  left: -43px !important;
+  top: 7px !important;
+}
+
+.highlight-own:root .quotesYou .post.reply::before {
+  position: absolute !important;
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAbFBMVEWau8+au8+UtMeau8+au8+PrsGau8+RsMOau8+au8+QsMKau8+au8+UtMiSssWau8+Yuc2Yucyau8+au8+au8+au8+au8+au8+au8+au8+au8+au8+au8+au88AAACWtsqTssaZus6SssWau8/PKrRpAAAAH3RSTlNYP8hmN/0R6YMt7niHxdgTp6oKgXWVVStikDUBDwMAzojEkAAAAFdJREFUeNpVx0cCgCAQBEFzzlmQVZn//1HQA2ufujyyHZ3W/WDv8wjT5Dxb786L9ebc3sarMzXApZgroCZmAZTcskDOTVkqf058+ll4ivs4EXKrII7eeQBrsxdCndAh2gAAAABJRU5ErkJggg==) !important;
+  left: -40px !important;
+  top: 7px !important;
+}
+
+.highlight-you:root .yourPost > .post.reply,
+.highlight-you:root .quotesYou > .post.reply {
+  padding-right: 2px !important;
+}
+
+.highlight-you:root .quotesYou > .post.reply.qphl,
+.highlight-own:root .yourPost > .post.reply.qphl {
+ margin-right: -24px !important;
+ min-width: 94% !important;
+ max-width: 94% !important;
+}
+
+.highlight-own:root .yourPost > .post.reply.qphl .menu-button,
+.highlight-you:root .quotesYou > .post.reply.qphl .menu-button {
+  left: 0 !important;
+}
+
+.subject {
+  font-weight: 500 !important;
+  font-size: 8pt !important;
+}
+
+.post.op .subject {
+  position: absolute !important;
+  top: -50px !important;
+  left: 5px !important;
+  right: -27px !important;
+  text-align: center !important;
+  font-size: 12pt !important;
+}
+
+.replylink {
+  float: right !important;
+  margin-left: -40px !important;
+  margin-top: -40px !important;
+  text-decoration: none !important;
+  font-size: 9pt !important;
+}
+
+.replylink::before {
+  margin-right: 3px !important;
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAKCAMAAAC+Ge+yAAAABlBMVEUAAACZn6qXf+aTAAAAAXRSTlMAQObYZgAAAB5JREFUeNqdyTEOAAAAwUD+/2ldxO7SQUI2YaOuawIJLQAr2AjG3wAAAABJRU5ErkJggg==) !important;
+/*  content: url('http://puu.sh/4gq3U.png') !important;*/
+}
+
+.summary::before {
+  visibility: visible !important;
+  position: absolute !important;
+  right: 0 !important;
+  width: 91px !important;
+  content: "Thread Summary" !important;
+} 
+
+.summary {
+  visibility: hidden !important;
+  position: absolute !important;
+  right: 112px !important;
+  margin-top: -23px !important;
+  z-index: 1 !important;
+  font-size: 9pt !important;
+}
+
+.summary:hover {
+  visibility: visible !important;
+}
+
+.summary:hover::before {
+  visibility: hidden !important;
+}
+
+.postNum span {
+  font-size: 0 !important;
+}
+
+.postNum {
+  position: absolute !important;
+  right: 10px !important;
+  float:right !important;
+}
+
+.postNum > a {  
+  transition: all .3s ease !important;
+  opacity: 0 !important;
+}
+
+.postInfo:hover .postNum > a {
+  opacity: 1 !important;
+}
+
+#qp .menu-button {
+  display: none !important;
+}
+
+#qp .post.op {
+  margin: 0 !important;
+}
+
+#qp .post.reply {
+  min-width: 350px !important;
+  max-width: 100% !important;
+}
+
+#qp .post.reply .postInfo {
+  margin-left: -15px !important;
+}
+
+#qp .post.op .postInfo {
+  margin-left: 15px !important;
+  top: 5px !important;
+}
+
+#qp .post.reply .file {
+  margin-left: -2px !important;
+}
+
+#qp .opContainer .subject {
+  display: none !important;
+}
+
+.inline .post.reply {
+  padding-right: 15px !important;
+}
+
+.inline .opContainer,
+.inline .postContainer {
+  border-radius: 0 !important;
+}
+
+.inline .menu-button {
+  display: none !important;
+}
+
+.backlink,
+.inline .backlink,
+.postMessage a,
+#credits a {
+  text-decoration: none !important;
+}
+
+.opContainer {
+  margin-top: -4px !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.op {
+  margin-top: -1px !important;
+  display: table !important;
+  height: 100% !important;
+  width: 100% !important;
+  padding-bottom: 3px !important;
+}
+
+.watch-thread-link {
+  position: relative !important;
+  top: 5px !important;
+  left: -2px !important;
+  width: 13px !important;
+}
+
+.watch-thread-link.watched {
+  opacity: 0.5 !important;
+}
+
+.postInfo {
+  margin-left: -31px !important;
+  margin-top: 2px !important;
+  width: auto !important;
+  display: block !important;
+}
+
+.postInfo input[type="checkbox"] {
+  width: 0px !important;
+  height: 0px !important;
+  visibility: hidden !important;
+}
+
+.fileInfo {
+  margin-left: -9px !important;
+}
+
+.op .fileInfo {
+  padding-top: 5px !important;
+  margin-left: 20px !important;
+}
+
+.op .file {
+  padding-bottom: 2px !important;
+  margin: 0px -6px 2px -5px !important;
+}
+
+.opContainer .postInfo {
+  position: relative !important;
+  top: -8px !important;
+}
+
+.opContainer .postInfo input[type="checkbox"] {
+  margin-left: -17px !important;
+}
+
+.opContainer.noFile .postInfo {
+  top: 2px !important;
+}
+
+.opContainer.noFile .postInfo input[type="checkbox"] {
+  margin-left: 25px !important;
+}
+
+.opContainer.noFile .subject {
+  top: -35px !important;
+}
+
+.opContainer.noFile .replylink {
+  margin-top: -25px !important;
+}
+
+.opContainer.noFile .stickyIcon {
+  position: absolute !important;
+  margin-left: -30px !important;
+  top: -45px !important;
+}
+
+.opContainer.noFile .closedIcon {
+  position: absolute !important;
+  margin-left: -7px !important;
+  top: -45px !important;
+}
+
+.opContainer .stickyIcon {
+  position: absolute !important;
+  margin-left: -30px !important;
+  top: -60px !important;
+}
+
+.opContainer .closedIcon {
+  position: absolute !important;
+  margin-left: -7px !important;
+  top: -60px !important;
+}
+
+.postMessage {
+  margin-left: -10px !important;
+  margin-top: 7px !important;
+}
+
+.op .postMessage {
+  margin-left: 16px !important;
+}
+
+.post.reply .fileThumb {
+  margin-left: -10px !important;
+}
+
+.fileDeleted,
+.fileDeletedRes {
+  margin-left: -3px !important;
+  margin-top: 10px !important;
+}
+
+#thread-watcher {
+  box-shadow: none !important;
+  height: auto !important;
+  margin-right: 15px !important;
+}
+
+#thread-watcher div {
+  padding-right: 15px !important;
+}
+
+#thread-watcher a {
+  margin-left: -1px !important;
+}
+
+#thread-watcher > .move {
+  height: 20px !important;
+  width: 100% !important;
+}
+
+#thread-watcher .move .close {
+  margin-right: -3px !important;
+  margin-top: -25px !important;
+}
+
+#thread-watcher div > a[href="javascript:;"]:not(.menu-button),
+#thread-watcher .close {
+  position: relative !important;
+  float: right !important;
+  left: 12px !important;
+  top: -1px !important;
+}
+
+#thread-watcher div > a[href="javascript:;"]:not(.menu-button),
+#thread-watcher .close,
+#thread-watcher .menu-button {
+  visibility: collapse !important;
+}
+
+#thread-watcher:hover div > a[href="javascript:;"]:not(.menu-button),
+#thread-watcher:hover .close,
+#thread-watcher:hover .menu-button {
+  visibility: visible !important;
+}
+
+#thread-watcher a[href="javascript:;"]{
+  position: relative !important;
+  top: -27px !important; 
+  right: -10px !important;
+}
+
+.closed {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+#unread-line {
+  position: relative !important;
+  display: block !important;
+  margin-left: 24px !important;
+  margin-bottom: -1px !important;
+  width: calc(100% - 48px) !important;
+  height: 1px !important;
+  z-index: 1 !important;
+}
+
+
+
+/**
+    Global Message
+*/
+
+.hide-announcement {
+  width: 100% !important;
+  z-index: 10 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  font-size: 0 !important;
+  text-align: center !important;
+}
+
+.hide-announcement > * {
+  text-align: left !important;
+}
+
+.hide-announcement::after {
+  margin-left: -5% !important;
+  position: absolute !important;
+  float: none !important;
+  content: "Hide Announcement";
+  font-size: 12pt !important;
+}
+
+#globalMessage {
+  margin: 35px 71px 0 75px!important;
+  z-index: 0 !important;
+  padding: 5px 0 !important;
+}
+
+#globalMessage h3 {
+  font-size: 10pt !important;
+  font-weight: normal !important;
+  margin: 2px !important;
+}
+
+#globalMessage strong, h2 {
+  margin: 2px !important;
+  font-size: 10pt !important;
+  font-weight: normal !important;
+}
+
+#watcher,
+#watcher a {
+  font-weight: 400 !important;
+  font-size: 10pt !important;
+}
+
+#board-list a {
+  font-size: 9pt !important;
+}
+
+
+.name {
+  font-weight: 500 !important;
+}
+
+.useremail {
+  font-style: italic !important;
+  text-decoration: none !important;
+}
+
+a.useremail[href*='sage'] .name,
+a.useremail[href*='Sage'] .name,
+a.useremail[href*='SAGE'] .name,
+a.useremail[href*='sage'] .postertrip,
+a.useremail[href*='Sage'] .postertrip,
+a.useremail[href*='SAGE'] .postertrip {
+  font-weight: normal !important;
+} 
+
+a.useremail[href*='sage'] .name:hover,
+a.useremail[href*='Sage'] .name:hover,
+a.useremail[href*='SAGE'] .name:hover,
+a.useremail[href*='sage'] .postertrip:hover,
+a.useremail[href*='Sage'] .postertrip:hover,
+a.useremail[href*='SAGE'] .postertrip:hover {
+  transition: all 0.3s ease 0s;
+}
+
+.nameBlock a:hover::after {
+  content: "(" attr(href) ")";
+  margin-left: 3px;
+  transition: all 0.3s ease 0s;
+}
+
+.quotelink.inlined,
+.backlink.inlined,
+.inlined {
+  font-style: italic !important;
+  opacity: 1 !important;
+}
+
+.deadlink:not(.you),
+.deadlink.quotelink {
+  text-decoration: line-through !important;
+}
+
+.deadlink.you {
+  text-decoration: none !important;
+}
+
+.warning,
+.deadlink,
+.deadlink.quotelink,
+.postMessage strong {
+  font-weight: normal !important;
+}
+
+.post.reply .container,
+.backlink {
+  font-size: 0 !important;
+}
+
+.backlink {
+  margin-right: 2px !important;
+}
+
+.backlink:after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAWlBMVEV5fYaAgI2AgJJ9goltkpJ2e4R6fod7gYl9gop3fIR7gIh7f4l2e4R4fIWAgIB6hYWAgIh8gYl8gYqqqqqAgIB7gIl8g4pxcY6AgIB4fIV6fod8gYp2e4MAAAA4uDDcAAAAHnRSTlO2Jg5qB9KsW17LoaXQuwoZHmOWAwiPIwkCwLKS1wB7uBKRAAAAPUlEQVR42h3GRxKAMBAEsSFnTMZh+//fhLJOEpw7P3GlmPMeNk9j73VbVukJZoOaILYlQtEKXALfCVihrD/O/wV4e/1KsQAAAABJRU5ErkJggg==) !important;
+  opacity: .6 !important;
+  margin-right: 4px !important;
+}
+
+.backlink:hover::after,
+.backlink.inlined::after {
+  opacity: 1 !important;
+}
+
+.backlink.filtered::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAWlBMVEW+cXK+cXK+dHfFjJLEhIfFjpe5mJjGiIu+cnPHh4u/dnnEj4+/dXjCkJDFjJDGhom/eXzDjpHXoqLEj4+/en28hpbEj4++c3XAen0AAAC/cHK/cHK/cHLJcXI2+BFDAAAAGnRSTlP+/vRGqxsOlvyZ6xTuMDih4UEGENkSBPncABCjtZkAAAA/SURBVHjaHYpJDoAwDMRGrGKnLKWOlP9/k6i+2AcLroNA3OWr8Z7u6zxlPV7plCxkbmK3eNpGsBXIo4AF+uEHyzMFbIkx68oAAAAASUVORK5CYII=) !important;
+  opacity: .7 !important;
+}
+
+.backlink.filtered.inlined::after,
+.backlink.filtered:hover::after {
+  opacity: 1 !important;
+}
+
+.fileText,
+.fileInfo a {
+  font-size: 8pt !important;
+  text-decoration: none !important;
+  font-style: italic !important;
+}
+
+.fileInfo:hover a,
+.fileInfo .fileText a {
+  opacity: 1 !important;
+}
+
+.fileInfo a {
+  opacity: 0 !important;
+}
+
+.prettyprint span {
+  font-family: "Consolas", monospace !important;
+}
+
+.prettyprint {
+  font-size: 9pt !important;
+  max-width: 700px !important;
+}
+
+.deleted-post .post.reply > * {
+  transition: all .3s ease !important;
+  opacity: 0.5 !important;
+}
+
+#qp .deleted-post .post.reply > *,
+.deleted-post:hover .post.reply > * {
+  opacity: 1 !important;
+}
+
+.deleted-post .post.reply::before {
+  position: absolute !important;
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAOVBMVEXDYGDEYGHIYmPIYmPIYmPCX2DIYmPDX2DIYmPIYmPIYmPIYmO7W1zCX2DCX2DIYmO7W1wAAADIYmP54dujAAAAEnRSTlO1syciSsAltygjSyT2vL0m9ADTKp5oAAAAWklEQVR42mXOSRLAIAhEUTM5K9D3P2wIpjKUf8XbAE7+qWNzSadtaav5AJjEM9DMHUDNSnRzqRjVYhbiQZJh2c1Zbns2Mw0XpcVl2v/ep+d+7OH6L4UWzZ9mn5ClDOSbS0VpAAAAAElFTkSuQmCC) !important;
+  left: -43px !important;
+  top: 7px !important;
+}
+
+#qp .deleted-post .post.reply::before,
+.deleted-post .postInfo .warning {
+  display: none !important;
+}
+
+/**
+    Page Links
+*/
+
+.pagelist {
+  float: none !important;
+  width: 100% !important;
+  height:20px!important;
+  margin: 0 auto 0 auto!important;
+  padding:0!important;
+  font-size: 9pt !important;
+  white-space: nowrap !important;
+}
+
+.pages {
+  text-align: center !important;
+  float: none !important;
+}
+
+.next,
+.prev,
+.pages.cataloglink,
+.pagelist .prev input,
+.pagelist .next input {
+  position: relative !important;
+  -moz-appearance: none !important;
+  width: 0 !important;
+}
+
+/**
+    Settings screen
+*/
+
+#fourchanx-settings.dialog label {
+  text-decoration: none !important;
+  font-style: italic !important;
+}
+
+#optionsbar {
+  margin: -5px !important;
+  padding: 5px !important;
+}
+
+.dialog a,
+.dialog label {
+  text-decoration: none !important;
+}
+
+#optionsContent > input:checked + div,
+#updater:hover > div,
+#updater .move,
+#qr.dump #replies,
+.hasSubMenu.focused > .subMenu {
+  display: block;
+}
+
+#fourchanx-settings.dialog .section-filter .field {
+  height: 540px !important;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+#fourchanx-settings.dialog .section-sauce .field {
+  height: 400px !important;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+/**
+    Quick reply
+*/
+
+#qr.dialog.autohide {
+  top: -245px !important;
+  transition: all 0.5s ease;
+  z-index: 2 !important;
+}
+
+#qr.dialog.has-captcha {
+  top: 29px !important;
+  transition: all 0.5s ease;
+}
+
+#qr.dialog.has-captcha.autohide {
+  top: -327px !important;
+  transition: all 0.5s ease;
+}
+
+#qr.dialog.dump.autohide {
+  top: -335px !important;
+  transition: all 0.5s ease;
+}
+
+#qr.dialog.dump.has-captcha.autohide {
+  top: -416px !important;
+  transition: all 0.5s ease;
+}
+
+#qr.autohide:not(.has-focus):not(:hover) > form,
+#file-n-submit:not(.has-file) {
+  display: inherit !important;
+}
+
+#qr.dialog {
+  position: fixed !important;
+  display: inline !important;
+  top: 29px !important;
+  right: 0px !important;
+  left: auto !important;
+  width: 350px !important;
+  transition: all 0.5s ease;
+  z-index: 9 !important;
+  padding: 0 !important;
+}
+
+#qr .move {
+  position: fixed !important;
+  float: right !important;
+  left: 151px !important;
+  bottom: -2px !important;
+  margin-top: 0px !important;
+  font-size: 0px !important;
+  height: 25px !important;
+  max-width: 15px !important;
+  min-width: 15px !important;
+  cursor: default !important;
+}
+
+#qr > div {
+  max-width: 400px !important;
+  width: 400px !important;
+}
+
+#qr select {
+  display: none !important;
+}
+
+textarea.field {
+  height: 230px !important;
+  margin-bottom: -1px !important;
+  transition: all 0.25s ease-in-out !important;
+}
+
+input[type="submit"],
+#qr-no-file,
+#qr textarea.field::-moz-placeholder,
+.persona .field::-moz-placeholder {
+  font-size: 12px !important;
+  text-transform: lowercase !important;
+}
+
+.field {
+  border: none !important;
+}
+
+#qr-filename-container {
+  margin-bottom: 3px !important;
+  overflow: hidden !important;
+  max-height: 19px !important;
+  min-width: 74.2% !important;
+  max-width: 74.2% !important;
+}
+
+#qr.has-spoiler.has-file #qr-filename-container {
+  min-width: 68.3% !important;
+  max-width: 68.3% !important;
+}
+
+#file-n-submit.has-file #qr-filename-container {
+  min-width: 74.4% !important;
+  max-width: 74.4% !important;
+}
+
+#qr-spoiler-label {
+  max-height: 19px !important;
+  min-height: 19px !important;
+  margin-left: -1px !important;
+}
+
+#qr-spoiler-label input {
+  top: 1px !important;
+}
+
+#qr-filename {
+  min-width: 92% !important;
+  max-width: 92% !important;
+  overflow: hidden !important;
+}
+
+#file-n-submit {
+  height: 20px !important;
+}
+
+#file-n-submit input {
+  width: 25.5% !important;
+}
+
+#file-n-submit.has-file input {
+  margin-left: -2px !important;
+  width: 25.5% !important;
+}
+
+#qr-filerm {
+  bottom: 2px !important;
+  right: 10px !important;
+}
+
+textarea,
+.field,
+#qr [type=file] [type=text] {
+  -moz-appearance: none !important;
+  font-size: 12px !important;
+  vertical-align: middle !important;
+}
+
+#qr [type=file] [type=text] {
+  float: right !important;
+}
+
+input[type="submit"] {
+  margin-top: 1px !important;
+  text-align: center !important;
+  margin-left: -1px !important;
+  padding-bottom: 2px !important;
+  width: 25.2% !important;
+  cursor: pointer !important;
+  background-repeat: repeat-x !important;
+  -moz-border-top-colors: none !important;
+  -moz-border-right-colors: none !important;
+  -moz-border-bottom-colors: none !important;
+  -moz-border-left-colors: none !important;
+  border-image: none !important;
+  -moz-appearance: none !important;
+}
+
+input[name="name"],
+input[name="email"],
+input[name="sub"] {
+  max-height: 23px !important;
+  min-height: 23px !important;
+}
+
+.persona {
+  max-height: 20px !important;
+  min-height: 20px !important;
+}
+
+.captcha-img {
+  margin-top: 0 !important;
+  margin-bottom: -1px !important;
+  min-width: 300px !important;
+  max-width: 300px !important;
+}
+
+.captcha-img > img {
+  margin-left: 0px !important;
+  margin-top: 5px !important;
+  visibility: visible !important;
+  min-width: 298px !important;
+  max-width: 298px !important;
+}
+
+.captcha-input.field {
+  margin-top: -1px !important;
+  margin-bottom: -1px !important;
+}
+
+#dump-list-container {
+  margin-bottom: -1px !important;
+}
+
+.qr-preview {
+  margin-bottom: 1px !important;
+}
+
+/**
+    Menu Button
+*/
+
+.postContainer .menu-button {
+  float: right !important;
+  margin-right: -6px !important;
+  font-size: 0 !important;
+}
+
+.post.op .menu-button,
+.postContainer .menu-button {
+  opacity: 0 !important;
+}
+
+.post.op:hover .menu-button,
+.postContainer:hover .menu-button {
+  opacity: 1 !important;
+}
+
+.postContainer .menu-button::after {
+  content: "\25BE" !important;
+  font-size: 6pt !important;
+}
+
+.opContainer.noFile .post.op .menu-button {
+  position: relative !important;
+  top: 12px !important;
+  margin-left: 0 !important;
+  font-size: 0 !important;
+}
+
+.post.op .menu-button {
+  position: relative !important;
+  top: -14px !important;
+  right: 21px !important;
+  margin-left: 0 !important;
+  font-size: 0 !important;
+}
+ 
+#menu.reply.dialog {
+  display: block !important;
+  margin-left: 0 !important;
+  margin-top: -1px !important;
+}
+ 
+.subMenu {
+  left: -105px !important;
+  width: 100px !important;
+}
+
+.stub .menu-button {
+  float: right !important;
+  margin-right: -6px !important;
+  font-size: 0 !important;
+}
+
+.stub .menu-button i {
+  display: none !important;
+}
+
+.stub .menu-button::after {
+  content: "\25BE" !important;
+  font-size: 6pt !important;
+}
+
+.entry,
+.entry a,
+.subMenu {
+  font-size: 8pt !important;
+}
+
+/**
+    Hide threads / posts
+*/
+
+.stub span,
+.sideArrows,
+.hide-reply-button.stub span {
+  font-size: 0 !important;
+}
+
+.stub:first-of-type,
+.stub {
+  margin-top: 0px !important;
+}
+
+.stub {
+  position: relative !important;
+  width: 100% !important;
+  padding: 5px 0 0 0 !important;
+  min-height: 29px !important;
+  max-height: 29px !important;
+  margin-left: -1px !important;
+  margin-bottom: -2px !important;
+  top: -1px !important;
+  z-index: 0 !important;
+}
+
+.postContainer:hover .hide-reply-button {
+  opacity: 1 !important;
+}
+
+.hide-reply-button {
+  float:right!important;
+  margin-top: 2px !important;
+  margin-right: 10px !important;
+  z-index: 1 !important;
+  font-size: 0 !important;
+  opacity: 0 !important;
+}
+
+.show-reply-button span {
+  transition: all .3s ease !important;
+  opacity: 0 !important;
+}
+
+.stub:hover .show-reply-button span {
+  opacity: 1 !important;
+}
+
+.hide-thread-button {
+  position: relative !important;
+  float: right !important;
+  top: 2px !important;
+  margin-right: 8px !important;
+  right: 0 !important;
+  z-index: 1;
+  font-size: 0 !important;
+  opacity: 0 !important;
+   transition: all .3s ease !important;
+}
+
+.postContainer:hover .hide-thread-button {
+  opacity: 1 !important;
+}
+
+.hide-thread-button span::before,
+.hide-reply-button span::before {
+  content: "-" !important;
+  font-size: 9pt !important;
+  z-index: 5 !important;
+}
+
+.stub .menu-button,
+.hide-reply-button.stub .menu-button {
+  font-size: 0px !important;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif !important;
+  margin-top: 3px !important;
+  margin-right: 3px !important;
+}
+
+.stub span:not(.dropmarker)::before {
+  float: right !important;
+  margin-top: 0px !important;
+  margin-right: 7px !important;
+  content: "+" !important;
+  font-size: 9pt !important;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif !important;
+}
+ 
+.stub a {
+  margin-left: 0px !important;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif !important;
+  font-size: 9pt !important;
+  padding-left: 7px !important;
+}
+
+/**
+    Updater
+*/
+
+#thread-stats {
+  opacity: 0 !important;
+  position: fixed !important;
+  left: auto !important;
+  right: 50px !important;
+  bottom: auto !important;
+  top: 0 !important;
+  z-index: 4 !important;
+  font-size: 0 !important;
+}
+
+#thread-stats:hover {
+  opacity: 1 !important;
+  cursor: default !important;
+}
+
+#post-count::before {
+  content:"Posts: ";
+}
+
+#post-count {
+  position: fixed !important;
+  bottom: 36px !important;
+  left: 0px !important;
+  width: 52px !important;
+  padding-right: 3px !important;
+  text-align: left !important;
+  font-size: 9pt !important;
+}
+
+#file-count::before {
+  content:"Files: ";
+}
+
+#file-count {
+  position: fixed !important;
+  bottom: 19px !important;
+  left: 0px !important;
+  width: 52px !important;
+  padding-right: 3px !important;
+  text-align: left !important;
+  font-size: 9pt !important;
+}
+
+#page-count:not(.warning)::before {
+  content:"Page: ";
+}
+
+#page-count {
+  position: fixed !important;
+  bottom: 2px !important;
+  left: 0px !important;
+  width: 52px !important;
+  padding-right: 3px !important;
+  text-align: left !important;
+  font-size: 9pt !important;
+}
+
+}
+
+@-moz-document regexp("https?://boards\\.4chan\\.org\\/(.|..|...|....)\\/catalog") {
+
+/**
+    Colours
+*/
+
+#ctrl,
+#qf-ctrl.button,
+body {
+  color: #5F5F5F !important;
+}
+
+#qf-box {
+  outline: none !important;
+}
+
+input:focus, 
+textarea:focus {
+  border: none !important;
+}
+
+#theme {
+  background: #fff !important;
+}
+
+#post-preview {
+  color: #5f5f5f !important;
+  background-color: #fff !important;
+  border: 1px solid #ebebeb !important;
+}
+
+/**
+    Layout
+*/
+
+#globalToggle,
+#first-run,
+#globalMessage,
+#toggleMsgBtn,
+#filters-ctrl,
+#qf-clear.button,
+#styleSwitcher {
+  display: none !important;
+}
+
+#content {
+  position: inherit !important;
+}
+
+.btn-wrap {
+  font-size: 0 !important;
+}
+
+#settings  {
+  width: 100% !important;
+}
+
+#settings,
+#threads,
+#info .navLinks,
+#content .navLinks {
+  text-align: center !important;
+}
+
+#ctrl,
+#qf-ctrl.button {
+  font-size: 9pt !important;
+  text-decoration: none !important;
+  margin-top: 25px !important;
+}
+
+#settingsWindowLink {
+  font-size: 0 !important;
+}
+
+#settingsWindowLink::after {
+  content: "Catalog Settings" !important;
+  position: fixed !important;
+  bottom: 5px !important;
+  left: 8px !important;
+  font-size: 9pt !important;
+  font-weight: normal !important;
+}
+
+#post-preview {
+  border-radius: 0 !important;
+}
+
+}

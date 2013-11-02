@@ -1,5 +1,4 @@
-/*(TODO: Fix icons next to replies on inlined replies  */
-/*       Fix inline OP posts)                          */
+/*(TODO:   */
 
 @-moz-document domain("boards.4chan.org") {
 
@@ -172,6 +171,7 @@ body {
   color: #d4d9d9 !important;
 }
 
+.postMessage a[href*="images.4chan.org"]:hover,
 .quotelink.inlined,
 .backlink.inlined,
 .inlined,
@@ -208,6 +208,7 @@ body {
   color: #49637d !important;
 }
 
+.postMessage a[href*="images.4chan.org"],
 .stub a,
 .stub span:not(.dropmarker)::before,
 .hide-thread-button span::before,
@@ -259,6 +260,10 @@ a.useremail[href*='SAGE'] .postertrip:hover {
 .settings-link:hover,
 .postNum a {
   color: #7c818c !important;
+}
+
+.postInfo {
+  color: transparent !important;
 }
 
 .quotelink.filtered,
@@ -837,7 +842,7 @@ body {
 
 .expanded-image,
 .threadOP {
-  clear: none !important;
+  clear: both !important;
 }
 
 .threadContainer {
@@ -904,25 +909,33 @@ body {
 
 .post.op .subject {
   position: absolute !important;
-  top: -50px !important;
-  left: 5px !important;
-  right: -27px !important;
+  margin-top: -55px !important;
+  left: 0 !important;
+  right: 0!important;
   text-align: center !important;
   font-size: 12pt !important;
 }
 
+.op .postNum > a {
+  opacity: 1 !important;
+}
+
+.op .postNum {
+  right: 115px !important;
+}
+
 .replylink {
   float: right !important;
-  margin-left: -40px !important;
-  margin-top: -40px !important;
+  margin-left: -8px !important;
+  margin-top: 2px !important;
   text-decoration: none !important;
   font-size: 9pt !important;
 }
 
 .replylink::before {
   margin-right: 3px !important;
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAKCAMAAAC+Ge+yAAAABlBMVEUAAACZn6qXf+aTAAAAAXRSTlMAQObYZgAAAB5JREFUeNqdyTEOAAAAwUD+/2ldxO7SQUI2YaOuawIJLQAr2AjG3wAAAABJRU5ErkJggg==) !important;
-/*  content: url('http://puu.sh/4gq3U.png') !important;*/
+  content: "- ";
+  /*content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAKCAMAAAC+Ge+yAAAABlBMVEUAAACZn6qXf+aTAAAAAXRSTlMAQObYZgAAAB5JREFUeNqdyTEOAAAAwUD+/2ldxO7SQUI2YaOuawIJLQAr2AjG3wAAAABJRU5ErkJggg==) !important;*/
 }
 
 .summary::before {
@@ -991,6 +1004,11 @@ body {
   top: 5px !important;
 }
 
+#qp .post.reply::before,
+#qp .post.op .postNum {
+  display: none !important;
+}
+
 #qp .post.reply .file {
   margin-left: -2px !important;
 }
@@ -1025,6 +1043,10 @@ body {
   width: 100% !important;
 }
 
+.opContainer.expanded-image .postInfo {
+  display: inline !important;
+}
+
 .op {
   margin-top: -1px !important;
   display: table !important;
@@ -1048,7 +1070,10 @@ body {
   margin-left: -31px !important;
   margin-top: 2px !important;
   width: auto !important;
-  display: block !important;
+}
+
+.op .postInfo {
+  margin-left: -0px !important;
 }
 
 .postInfo input[type="checkbox"] {
@@ -1072,8 +1097,7 @@ body {
 }
 
 .opContainer .postInfo {
-  position: relative !important;
-  top: -8px !important;
+  margin-top: -8px !important;
 }
 
 .opContainer .postInfo input[type="checkbox"] {
@@ -1371,21 +1395,15 @@ a.useremail[href*='SAGE'] .postertrip:hover {
   max-width: 700px !important;
 }
 
-.deleted-post .post.reply > * {
-  transition: all .3s ease !important;
-  opacity: 0.5 !important;
-}
-
-#qp .deleted-post .post.reply > *,
-.deleted-post:hover .post.reply > * {
-  opacity: 1 !important;
-}
-
 .deleted-post .post.reply::before {
   position: absolute !important;
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAOVBMVEXDYGDEYGHIYmPIYmPIYmPCX2DIYmPDX2DIYmPIYmPIYmPIYmO7W1zCX2DCX2DIYmO7W1wAAADIYmP54dujAAAAEnRSTlO1syciSsAltygjSyT2vL0m9ADTKp5oAAAAWklEQVR42mXOSRLAIAhEUTM5K9D3P2wIpjKUf8XbAE7+qWNzSadtaav5AJjEM9DMHUDNSnRzqRjVYhbiQZJh2c1Zbns2Mw0XpcVl2v/ep+d+7OH6L4UWzZ9mn5ClDOSbS0VpAAAAAElFTkSuQmCC) !important;
   left: -43px !important;
   top: 7px !important;
+}
+
+.inline .post.reply::before {
+  display: none !important;
 }
 
 #qp .deleted-post .post.reply::before,
@@ -1673,6 +1691,7 @@ input[name="sub"] {
 .postContainer .menu-button {
   float: right !important;
   margin-right: -6px !important;
+  margin-top: 2px !important;
   font-size: 0 !important;
 }
 
@@ -1700,7 +1719,7 @@ input[name="sub"] {
 
 .post.op .menu-button {
   position: relative !important;
-  top: -14px !important;
+  top: -24px !important;
   right: 21px !important;
   margin-left: 0 !important;
   font-size: 0 !important;

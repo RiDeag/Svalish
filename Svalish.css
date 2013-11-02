@@ -840,11 +840,6 @@ body {
   transition: all 1.5s 0.5s ease !important;
 }
 
-.expanded-image,
-.threadOP {
-  clear: both !important;
-}
-
 .threadContainer {
   padding-left: 0 !important;
   margin-left: 1px !important;
@@ -1045,6 +1040,14 @@ body {
 
 .opContainer.expanded-image .postInfo {
   display: inline !important;
+}
+
+.opContainer.expanded-image .nameBlock {
+  margin-left: 15px !important;
+}
+
+.opContainer.expanded-image .fileThumb {
+  width: calc(100% - 40px) !important;
 }
 
 .op {
@@ -1715,6 +1718,11 @@ input[name="sub"] {
   top: 12px !important;
   margin-left: 0 !important;
   font-size: 0 !important;
+}
+
+.opContainer.expanded-image .post.op .menu-button  {
+  top: -10px !important;
+  right: 10px !important;
 }
 
 .post.op .menu-button {

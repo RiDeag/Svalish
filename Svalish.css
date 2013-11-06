@@ -1,6 +1,18 @@
+@font-face {
+	font-family: 'ionicons';
+	src:url('https://github.com/RiDeag/Svalish/raw/master/fonts/ionicons.eot');
+	src:url('https://github.com/RiDeag/Svalish/raw/master/fonts/ionicons.eot?#iefix') format('embedded-opentype'),
+		url('https://github.com/RiDeag/Svalish/raw/master/fonts/ionicons.ttf') format('truetype'),
+		url('https://github.com/RiDeag/Svalish/raw/master/fonts/ionicons.woff') format('woff'),
+		url('https://github.com/RiDeag/Svalish/raw/master/fonts/ionicons.svg#ionicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /*(TODO:   */
 
 @-moz-document domain("boards.4chan.org") {
+
 
 /**
     Main Colours
@@ -95,6 +107,24 @@
   box-shadow: none !important;
   border: none !important;
   outline: none !important;
+}
+
+.backlink.forwardlink {
+  border: none !important;
+}
+
+.backlink.deadlink,
+.backlink.deadlink:hover  {
+  color: transparent !important;
+}
+
+.quotelink.forwardlink {
+  color: #4f4f4f !important;
+  border-bottom: 1px dashed #4f4f4f !important;
+}
+
+.quotelink.you.forwardlink {
+  border-bottom: 1px dashed #769ec2 !important;
 }
 
 #qp .postContainer {
@@ -257,6 +287,10 @@ a.useremail[href*='SAGE'] .postertrip:hover {
   font-size: 9pt !important;
 }
 
+.dateTime::before {
+  color: #b3b7bd !important;
+}
+
 .settings-link:hover,
 .postNum a {
   color: #7c818c !important;
@@ -266,16 +300,12 @@ a.useremail[href*='SAGE'] .postertrip:hover {
   color: transparent !important;
 }
 
+.deadlink,
 .quotelink.filtered,
 .warning,
-.deadlink,
-.deadlink.quotelink,
+.quotelink.deadlink,
 .postMessage strong {
-  color: #d56b6b !important;
-}
-
-.deadlink:hover {
-  color: #c34c4f !important;
+  color: #c97172 !important;
 }
 
 .highlight-you:root .quotesYou .post.reply,
@@ -584,6 +614,98 @@ input[type="submit"] {
 }
 
 /**
+		Icon colours
+*/
+
+/*Gives the correct font for the icons*/
+/*Credit to: http://ionicons.com for the icons*/
+
+.backlink:after,
+.reply:target::before,
+.post.op.qphl::before,
+.reply.highlight::before,
+.post.reply.qphl::before,
+.deleted-post .post.reply::before,
+.highlight-own:root .yourPost .post.reply::before,
+.highlight-own:root .quotesYou .post.reply::before {
+  font-family: "ionicons" !important;
+}
+
+/*Posts quoting you*/
+.highlight-own:root .quotesYou .post.reply::before {
+  font-size: 17px !important;
+  color: #c86263 !important;
+}
+
+/*Your posts*/
+.highlight-own:root .yourPost .post.reply::before {
+  font-size: 17px !important;
+  color: #9abbcf !important;
+}
+
+/*Deleted posts*/
+.deleted-post .post.reply::before {
+  color: #c86263 !important;
+}
+
+/*Backlinks*/
+.backlink:after {
+  color: #5f5f65 !important;
+  font-size: 12px !important;
+  opacity: .4 !important;
+}
+
+/*Hovered and inlined backlinks*/
+.backlink:hover::after,
+.backlink.inlined::after {
+  opacity: .8 !important;
+}
+
+/*Filtered backlinks*/
+.backlink.filtered::after {
+  color: #c97172 !important;
+  opacity: .7 !important;
+}
+
+/*Backlinks to deleted posts*/
+.backlink.deadlink::after {
+  color: #c97172 !important;
+  opacity: .7 !important;
+}
+
+/*Hovered backlinks to deleted posts*/
+.backlink.deadlink:hover::after {
+  opacity: 1 !important;
+}
+
+/*Hovered and inlined filtered backlinks*/
+.backlink.filtered.inlined::after,
+.backlink.filtered:hover::after {
+  opacity: 1 !important;
+}
+
+/*Highlighted posts and idicator of post when hovering quotelink*/
+.reply:target::before,
+.reply.highlight::before,
+.post.reply.qphl::before {
+  font-size: 17px !important;
+  color: #c86263 !important;
+}
+
+/*OP post indicator*/
+.post.op.qphl::before {
+  font-size: 17px !important;
+  color: #c86263 !important;
+}
+
+/*Honestly no idea how to word this comment, you're probably best off keeping this the same though*/
+.quotelink.forwardlink,
+.backlink.forwardlink,
+.backlink.forwardlink::after{
+  opacity: .85 !important;
+}
+
+/**
     Main Layout
 */
 
@@ -852,7 +974,7 @@ body {
 
 .post.op.qphl::before {
   position: absolute !important;
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAPFBMVEWpcXemd4CkeIGkeIKmd4CieYOqcXikeIKieYOoaW6odX6qZmoAAADEY2XDZGazZWm2ZWm+ZmnHY2TIYmPQ4oCaAAAADXRSTlOxWTEXUBSuMATjffgAMsIOvAAAAEBJREFUeNp9zksOgCAAA1FUEOWPvf9dTUyQjAtn9zZNTWLD50ErOlrV0+r2sd5KoHXtHxs4B+4t2G8r/2w/f2c34I8LG54U8U4AAAAASUVORK5CYII=) !important;
+  content: "\f10b" !important;
   margin-left: -20px !important;
   margin-top: 7px !important;
 }
@@ -861,22 +983,28 @@ body {
 .reply.highlight::before,
 .post.reply.qphl::before {
   position: absolute !important;
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAPFBMVEWpcXemd4CkeIGkeIKmd4CieYOqcXikeIKieYOoaW6odX6qZmoAAADEY2XDZGazZWm2ZWm+ZmnHY2TIYmPQ4oCaAAAADXRSTlOxWTEXUBSuMATjffgAMsIOvAAAAEBJREFUeNp9zksOgCAAA1FUEOWPvf9dTUyQjAtn9zZNTWLD50ErOlrV0+r2sd5KoHXtHxs4B+4t2G8r/2w/f2c34I8LG54U8U4AAAAASUVORK5CYII=) !important;
-  left: -43px !important;
+  content: "\f10b" !important;
+  left: -42px !important;
   top: 7px !important;
 }
 
 .highlight-own:root .yourPost .post.reply::before {
+  font-family: ionicons !important;
+  font-size: 17px !important;
+  color: #9abbcf !important;
   position: absolute !important;
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAM1BMVEWfnayfm6qfoLCUnq6fn6+enKuVnq6ena2Zna6emqkAAACbuMybuMubs8aaus6ZrL6au8+Au+NIAAAAC3RSTlNZLJP2hybzV8UIAJchNFQAAAA8SURBVHjafc5ZCgAgEALQad/L+582CCKcj/x7IKJUzvUqbIzARk9sTH+Ml6yMqOxUn/cs7TfhP+bz92UDJx8Jclmil2UAAAAASUVORK5CYII=) !important;
-  left: -43px !important;
+  content: "\f10b" !important;
+  left: -42px !important;
   top: 7px !important;
 }
 
 .highlight-own:root .quotesYou .post.reply::before {
+  font-family: ionicons !important;
+  font-size: 17px !important;
+  color: #c86263 !important;
   position: absolute !important;
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAbFBMVEWau8+au8+UtMeau8+au8+PrsGau8+RsMOau8+au8+QsMKau8+au8+UtMiSssWau8+Yuc2Yucyau8+au8+au8+au8+au8+au8+au8+au8+au8+au8+au8+au88AAACWtsqTssaZus6SssWau8/PKrRpAAAAH3RSTlNYP8hmN/0R6YMt7niHxdgTp6oKgXWVVStikDUBDwMAzojEkAAAAFdJREFUeNpVx0cCgCAQBEFzzlmQVZn//1HQA2ufujyyHZ3W/WDv8wjT5Dxb786L9ebc3sarMzXApZgroCZmAZTcskDOTVkqf058+ll4ivs4EXKrII7eeQBrsxdCndAh2gAAAABJRU5ErkJggg==) !important;
-  left: -40px !important;
+  content: "\f10b" !important;
+  left: -42px !important;
   top: 7px !important;
 }
 
@@ -930,7 +1058,6 @@ body {
 .replylink::before {
   margin-right: 3px !important;
   content: "- ";
-  /*content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAKCAMAAAC+Ge+yAAAABlBMVEUAAACZn6qXf+aTAAAAAXRSTlMAQObYZgAAAB5JREFUeNqdyTEOAAAAwUD+/2ldxO7SQUI2YaOuawIJLQAr2AjG3wAAAABJRU5ErkJggg==) !important;*/
 }
 
 .summary::before {
@@ -1076,13 +1203,21 @@ body {
 }
 
 .op .postInfo {
-  margin-left: -0px !important;
+  margin-left: 0px !important;
 }
 
 .postInfo input[type="checkbox"] {
   width: 0px !important;
   height: 0px !important;
   visibility: hidden !important;
+}
+
+.dateTime::before {
+  font-size: 8pt !important;
+  position: relative !important;
+  top: -1px !important;
+  padding-right: 1px !important;
+  content: "- " !important;
 }
 
 .fileInfo {
@@ -1327,6 +1462,11 @@ a.useremail[href*='SAGE'] .postertrip:hover {
   opacity: 1 !important;
 }
 
+.backlink::after,
+.quotelink {
+  transition: all .2s ease !important;
+}
+
 .deadlink:not(.you),
 .deadlink.quotelink {
   text-decoration: line-through !important;
@@ -1337,8 +1477,6 @@ a.useremail[href*='SAGE'] .postertrip:hover {
 }
 
 .warning,
-.deadlink,
-.deadlink.quotelink,
 .postMessage strong {
   font-weight: normal !important;
 }
@@ -1353,24 +1491,13 @@ a.useremail[href*='SAGE'] .postertrip:hover {
 }
 
 .backlink:after {
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAWlBMVEV5fYaAgI2AgJJ9goltkpJ2e4R6fod7gYl9gop3fIR7gIh7f4l2e4R4fIWAgIB6hYWAgIh8gYl8gYqqqqqAgIB7gIl8g4pxcY6AgIB4fIV6fod8gYp2e4MAAAA4uDDcAAAAHnRSTlO2Jg5qB9KsW17LoaXQuwoZHmOWAwiPIwkCwLKS1wB7uBKRAAAAPUlEQVR42h3GRxKAMBAEsSFnTMZh+//fhLJOEpw7P3GlmPMeNk9j73VbVukJZoOaILYlQtEKXALfCVihrD/O/wV4e/1KsQAAAABJRU5ErkJggg==) !important;
-  opacity: .6 !important;
+  font-size: 12px !important;
+  content: "\f21e" !important;
   margin-right: 4px !important;
 }
 
-.backlink:hover::after,
-.backlink.inlined::after {
-  opacity: 1 !important;
-}
-
 .backlink.filtered::after {
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAWlBMVEW+cXK+cXK+dHfFjJLEhIfFjpe5mJjGiIu+cnPHh4u/dnnEj4+/dXjCkJDFjJDGhom/eXzDjpHXoqLEj4+/en28hpbEj4++c3XAen0AAAC/cHK/cHK/cHLJcXI2+BFDAAAAGnRSTlP+/vRGqxsOlvyZ6xTuMDih4UEGENkSBPncABCjtZkAAAA/SURBVHjaHYpJDoAwDMRGrGKnLKWOlP9/k6i+2AcLroNA3OWr8Z7u6zxlPV7plCxkbmK3eNpGsBXIo4AF+uEHyzMFbIkx68oAAAAASUVORK5CYII=) !important;
-  opacity: .7 !important;
-}
-
-.backlink.filtered.inlined::after,
-.backlink.filtered:hover::after {
-  opacity: 1 !important;
+  content: "\f21e" !important;
 }
 
 .fileText,
@@ -1399,14 +1526,29 @@ a.useremail[href*='SAGE'] .postertrip:hover {
 }
 
 .deleted-post .post.reply::before {
+  font-size: 13px !important;
   position: absolute !important;
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAOVBMVEXDYGDEYGHIYmPIYmPIYmPCX2DIYmPDX2DIYmPIYmPIYmPIYmO7W1zCX2DCX2DIYmO7W1wAAADIYmP54dujAAAAEnRSTlO1syciSsAltygjSyT2vL0m9ADTKp5oAAAAWklEQVR42mXOSRLAIAhEUTM5K9D3P2wIpjKUf8XbAE7+qWNzSadtaav5AJjEM9DMHUDNSnRzqRjVYhbiQZJh2c1Zbns2Mw0XpcVl2v/ep+d+7OH6L4UWzZ9mn5ClDOSbS0VpAAAAAElFTkSuQmCC) !important;
-  left: -43px !important;
+  content: "\f129" !important;
+  left: -41px !important;
   top: 7px !important;
 }
 
 .inline .post.reply::before {
   display: none !important;
+}
+
+.inline .opContainer .postNum,
+.inline .opContainer .subject {
+  display: none !important;
+}
+
+.inline .op .postInfo {
+  display: block !important;
+  margin-left: 15px !important;
+}
+
+.inline .op .fileThumb {
+  margin-left: 20px !important;
 }
 
 #qp .deleted-post .post.reply::before,
